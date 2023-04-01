@@ -12,4 +12,6 @@ Rails.application.routes.draw do
     get :about
     get :blog
   end
+  get 'client_dashboard', to: 'client#dashboard'
+  get 'professional_dashboard', to: 'professional#dashboard'
 end
