@@ -1,0 +1,17 @@
+<%= form_with(url: user_role_path(@user), method: :post) do |form| %>
+  <div class="cursor-pointer hover:bg-blue-300 bg-blue-200 p-4 rounded-lg text-center"
+       onclick="document.querySelector('input[name=\'role\']').value = 'client'; form.submit();">
+    <h3 class="mb-4 text-2xl font-bold">Client</h3>
+  </div>
+
+  <div class="cursor-pointer hover:bg-green-300 bg-green-200 p-4 rounded-lg text-center"
+       onclick="document.querySelector('input[name=\'role\']').value = 'professional'; form.submit();">
+    <h3 class="mb-4 text-2xl font-bold">Professional</h3>
+  </div>
+
+  <input type="hidden" name="role" value="">
+
+  <div class="mt-8 flex justify-center">
+    <%= form.button 'Continue', class: 'bg-blue-500 font-bold hover:bg-blue-700 focus:outline-none focus:shadow-outline px-4 py-2 rounded text-white', type: :submit %>
+  </div>
+<% end %>

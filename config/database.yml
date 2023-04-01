@@ -25,13 +25,13 @@ development:
   <<: *default
   database: esirbo_development
 
-  # The specified database role being used to connect to postgres.
+  # The specified database roles being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
-  # When left blank, postgres will use the default role. This is
+  # When left blank, postgres will use the default roles. This is
   # the same name as the operating system user running Rails.
   #username: esirbo
 
-  # The password associated with the postgres role (username).
+  # The password associated with the postgres roles (username).
   #password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
