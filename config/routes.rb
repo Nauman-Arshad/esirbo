@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   root 'website#home'
-  resource :website
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  scope controller: :website do
+    get :home
+    get :service
+    get :portfolio
+    get :contact
+    get :about
+    get :blog
+  end
 end
