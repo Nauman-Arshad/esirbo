@@ -11,3 +11,5 @@ menuBtn.addEventListener('click', function() {
     }
     document.body.classList.toggle('fixed');
 });
+
+
