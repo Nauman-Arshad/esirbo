@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'website#home'
   scope controller: :website do
     get :home

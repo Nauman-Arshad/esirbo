@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <%= javascript_importmap_tags %>
   </head>
@@ -15,7 +16,13 @@
   <% if controller_name == 'website' %>
     <%= render 'shared/header' %>
   <% end %>
-    <%= yield %>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+  <%= yield %>
   <% if controller_name == 'website' %>
     <%= render 'shared/footer' %>
   <% end %>
