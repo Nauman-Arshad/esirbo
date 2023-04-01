@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Esirbo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <% if controller_name == 'website' %>
+    <%= render 'shared/header' %>
+  <% end %>
+    <%= yield %>
+  <% if controller_name == 'website' %>
+    <%= render 'shared/footer' %>
+  <% end %>
+  </body>
+</html>
