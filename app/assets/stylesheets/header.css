@@ -2,3 +2,9 @@
     color: deeppink !important;
     text-decoration: underline;
 }
+.nav_bar {
+    background: linear-gradient(89.93deg, rgba(255, 255, 255, 0.2) -14.48%, rgba(94, 86, 86, 0.1) 110.38%);
+    color: #ffff;
+    position: sticky;
+    top: 0;
+}
