@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  devise_for :users, :controllers => {:registrations => "registrations"}
+  devise_for :users, controllers: { registrations: 'registrations' }
   root 'website#home'
   resource :user do
-    resource :role, only: [:new, :create]
+    resource :role, only: %i[new create]
   end
   scope controller: :website do
     get :home
