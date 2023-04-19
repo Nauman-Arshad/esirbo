@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  has_many :photos
+  has_many :consultation_requests
   has_one :user_role, dependent: :destroy
 
   # Include default devise modules. Others available are:

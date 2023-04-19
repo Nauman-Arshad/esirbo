@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  design_preferences: MyText
+  specific_requirements: MyText
+  consultation_time: 2023-04-13 00:20:51
+  user: one
+
+two:
+  design_preferences: MyText
+  specific_requirements: MyText
+  consultation_time: 2023-04-13 00:20:51
+  user: two

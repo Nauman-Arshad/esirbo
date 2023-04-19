@@ -3,7 +3,9 @@
 class ProfessionalController < ApplicationController
   before_action :check_user_role
 
-  def dashboard; end
+  def dashboard
+    @user = current_user
+  end
 
   private
 

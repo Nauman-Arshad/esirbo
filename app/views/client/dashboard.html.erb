@@ -1,10 +1,22 @@
-<div class="flex justify-center items-center h-screen">
-  <h1 class="text-4xl font-bold text-center text-gray-800">
-    Client Dashboard
-  </h1>
-  <% if user_signed_in? %>
-    <li>
-      <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" %>
-    </li>
-  <% end %>
+<%= render 'shared/client_nav' %>
+<div class="flex h-screen">
+  <div class="w-1/6 bg-gray-200">
+    <div class="p-4 my-32">
+      <ul class="space-y-2">
+        <li class="px-2 py-2 bg-white rounded-md cursor-pointer text-gray-600 hover:text-gray-800 hover:bg-gray-100">Overview</li>
+        <li class="px-2 py-2 bg-white rounded-md cursor-pointer text-gray-600 hover:text-gray-800 hover:bg-gray-100">Consulting</li>
+        <li class="px-2 py-2 bg-white rounded-md cursor-pointer text-gray-600 hover:text-gray-800 hover:bg-gray-100">Messages</li>
+        <li class="px-2 py-2 bg-white rounded-md cursor-pointer text-gray-600 hover:text-gray-800 hover:bg-gray-100">Projects</li>
+        <li class="px-2 py-2 bg-white rounded-md cursor-pointer text-gray-600 hover:text-gray-800 hover:bg-gray-100">Settings</li>
+        <li class="px-2 py-2 bg-white rounded-md cursor-pointer text-gray-600 hover:text-gray-800 hover:bg-gray-100">Help</li>
+      </ul>
+    </div>
+  </div>
+  <div class="w-5/6 bg-gray-100">
+    <div class="p-4">
+
+      Client Dashboard
+    </div>
+  </div>
 </div>
+
