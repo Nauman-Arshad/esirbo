@@ -23,8 +23,8 @@
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
   <%= yield %>
-  <%# if controller_name == 'website' %>
-    <%#= render 'shared/footer' %>
-  <%# end %>
+  <% if controller_name == 'website' %>
+    <%= render 'shared/footer' %>
+  <% end %>
   </body>
 </html>
