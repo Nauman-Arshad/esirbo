@@ -1,5 +1,136 @@
-<div class="flex justify-center items-center h-screen">
-  <h1 class="text-4xl font-bold text-center text-gray-800">
-    About Page website!
-  </h1>
+<div class="w-full h-screen flex" style="background: linear-gradient(112.68deg, rgba(237, 199, 183, 0.3) -40.97%, rgba(237, 199, 183, 0.15) 116.72%);">
+  <div class="w-1/2">
+    <%= image_tag 'homepage/bedroom', alt: 'livingroom', class: 'h-full w-full object-cover' %>
+  </div>
+  <div class="w-1/2 flex items-center justify-center">
+    <div class="p-8">
+      <h2 class="text-2xl  mb-4" style="
+      font-family: Agency FB;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43px;
+        letter-spacing: 0px;
+      ">About Us</h2>
+      <p class="text-gray-600" style="font-family: Manrope;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 38px;
+        letter-spacing: 0px;
+        text-align: left;
+      ">We are a team of experienced interior designers who believe in creating beautiful and
+        functional spaces that reflects your style and personality. We understand that every client is unique, and
+        therefore, we offer tailored solutions. </p>
+      <a href="#" class="mt-4 inline-block px-4 py-2" style="font-family: Manrope;
+        font-size: 14px;
+        font-weight: 400;
+        color: white;
+        line-height: 19px;
+        letter-spacing: 0px;
+        text-align: center;
+        background: rgb(117,60,88);
+      ">Learn More</a>
+    </div>
+  </div>
 </div>
+<div class="container m-auto" style="margin-bottom: 120px; margin-top: 120px">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 my-4">
+    <% flip_containers = [
+      { image: 'homepage/bedroom', alt: 'livingroom', title: 'What We Do', description: 'Lorem ipsum dolor sit amet consectetur. Nisl molestie egestas velit condimentum cras nibh. A etiam purus dolor ', color: '#EE8980FF' },
+      { image: 'homepage/kitchen', alt: 'kitchen', title: 'What We Do', description: 'Lorem ipsum dolor sit amet consectetur. Nisl molestie egestas velit condimentum cras nibh. A etiam purus dolor ',color: '#2578D9FF' },
+      { image: 'homepage/livingroom', alt: 'bathroom', title: 'What We Do', description: 'Lorem ipsum dolor sit amet consectetur. Nisl molestie egestas velit condimentum cras nibh. A etiam purus dolor ', color: '#1BBB53FF' },
+      { image: 'homepage/ab2', alt: 'bathroom', title: 'What We Do', description: 'Lorem ipsum dolor sit amet consectetur. Nisl molestie egestas velit condimentum cras nibh. A etiam purus dolor ', color: '#753C58FF' },
+      { image: 'homepage/ab3', alt: 'bathroom', title: 'What We Do', description: 'Lorem ipsum dolor sit amet consectetur. Nisl molestie egestas velit condimentum cras nibh. A etiam purus dolor ', color: '#BB1B38FF' },
+      { image: 'homepage/ab', alt: 'bathroom', title: 'What We Do', description: 'Lorem ipsum dolor sit amet consectetur. Nisl molestie egestas velit condimentum cras nibh. A etiam purus dolor ', color: '#2A15B7FF' }
+    ] %>
+
+    <% flip_containers.each do |container| %>
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <%= image_tag container[:image], alt: container[:alt], class: 'object-cover', style: "height: 325px!important; width:480px" %>
+          </div>
+          <div class="back flex items-center justify-center" style="background: <%= container[:color] %>;">
+            <div class="text-container text-white text-center">
+              <h3 class="text-xl font-bold" style="
+              font-family: Agency FB;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 43px;
+                letter-spacing: 0px;
+              ">?</h3>
+              <h3 class="text-xl font-bold" style="
+              font-family: Agency FB;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 43px;
+                letter-spacing: 0px;
+              "><%= container[:title] %></h3>
+              <p class="text-gray-600" style="
+              font-family: Manrope;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+                color: white;
+                letter-spacing: 0px;
+              "><%= container[:description] %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<style>
+    .flip-container {
+        height: 325px;
+        width: 480px;
+        left: -3px;
+        top: 793px;
+        perspective: 1000px;
+    }
+
+    .flipper {
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+    }
+
+    .front,
+    .back {
+        position: absolute;
+        height: 325px;
+        width: 480px;
+        backface-visibility: hidden;
+    }
+
+    .front {
+        z-index: 2;
+    }
+
+    .back {
+        transform: rotateY(180deg);
+    }
+
+    .flip-container:hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+    .text-container {
+        padding: 16px;
+        text-align: center;
+    }
+
+    .text-xl {
+        font-size: 1.25rem;
+    }
+
+    .font-bold {
+        font-weight: bold;
+    }
+
+    .text-gray-600 {
+        color: #6b7280;
+    }
+
+</style>
