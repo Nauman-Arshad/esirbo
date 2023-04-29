@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get :contact
     get :about
     get :blog
+    get :pricing
   end
   get 'client_dashboard', to: 'client#dashboard'
   get 'professional_dashboard', to: 'professional#dashboard'

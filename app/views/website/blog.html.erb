@@ -1,5 +1,170 @@
-<div class="flex justify-center items-center h-screen">
-  <h1 class="text-4xl font-bold text-center text-gray-800">
-    Blog Page website!
-  </h1>
+<div class="relative h-screen" style="height: 400px;">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url(<%= asset_path 'about/about.jpeg' %>)">
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="text-white px-6 py-3" style="border: 2px solid white">Our Blogs</button>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto" style="margin-bottom: 40px">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="bg-white sm:rounded-lg  shadow-lg m-4" style="width: 380px;">
+      <%= image_tag 'homepage/livingroom.png', alt: 'livingroom', class: 'w-full object-cover', style: 'height: 202px;' %>
+      <div class="p-4">
+        <p class="text-center" style="
+          font-family: Manrope;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0px;
+          text-align: left;
+        ">Space Utilization and Interior Designing</p>
+        <h3 class="text-xl font-bold">By Design Pro</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur. Enim eu sed mauris scelerisque volutpat
+          molestie. Vestibulum blandit a amet risus..</p>
+        <a href="#" class="mt-4 inline-block px-4 py-2" style="font-family: Manrope;
+          font-size: 14px;
+          font-weight: 400;
+          color: white;
+          line-height: 19px;
+          letter-spacing: 0px;
+          text-align: center;
+          background: rgba(33, 85, 108, 1);
+        ">Learn More</a>
+      </div>
+    </div>
+
+
+    <div class="bg-white sm:rounded-lg  shadow-lg m-4" style="width: 380px;">
+      <%= image_tag 'homepage/kitchen.png', alt: 'kit', class: 'w-full object-cover', style: 'height: 202px;' %>
+      <div class="p-4">
+        <p class="text-center" style="
+        font-family: Manrope;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0px;
+          text-align: left;
+        ">Furniture selection and color guide</p>
+        <h3 class="text-xl font-bold">By Design Pro</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur. Enim eu sed mauris scelerisque volutpat
+          molestie. Vestibulum blandit a amet risus..</p>
+        <a href="#" class="mt-4 inline-block px-4 py-2" style="font-family: Manrope;
+          font-size: 14px;
+          font-weight: 400;
+          color: white;
+          line-height: 19px;
+          letter-spacing: 0px;
+          text-align: center;
+          background: rgba(33, 85, 108, 1);
+        ">Learn More</a>
+      </div>
+    </div>
+
+    <div class="bg-white sm:rounded-lg  shadow-lg m-4" style="width: 380px;">
+      <%= image_tag 'homepage/started.jpg', alt: 'started', class: 'w-full object-cover', style: 'height: 202px;' %>
+      <div class="p-4">
+        <p class="text-center" style="
+        font-family: Manrope;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0px;
+          text-align: left;
+        ">Natural lighting simple methods in design</p>
+        <h3 class="text-xl font-bold">By Design Pro</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur. Enim eu sed mauris scelerisque volutpat
+          molestie. Vestibulum blandit a amet risus..</p>
+        <a href="#" class="mt-4 inline-block px-4 py-2" style="font-family: Manrope;
+          font-size: 14px;
+          font-weight: 400;
+          color: white;
+          line-height: 19px;
+          letter-spacing: 0px;
+          text-align: center;
+          background: rgba(33, 85, 108, 1);
+        ">Learn More</a>
+      </div>
+    </div>
+
+
+    <div class="bg-white sm:rounded-lg  shadow-lg m-4" style="width: 380px;">
+      <%= image_tag 'portfolio/bedroom1.jpg', alt: 'livingroom', class: 'w-full object-cover', style: 'height: 202px;' %>
+      <div class="p-4">
+        <p class="text-center" style="
+        font-family: Manrope;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0px;
+          text-align: left;
+        ">Dinning in Luxury</p>
+        <h3 class="text-xl font-bold">By Design Pro</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur. Enim eu sed mauris scelerisque volutpat
+          molestie. Vestibulum blandit a amet risus..</p>
+        <a href="#" class="mt-4 inline-block px-4 py-2" style="font-family: Manrope;
+          font-size: 14px;
+          font-weight: 400;
+          color: white;
+          line-height: 19px;
+          letter-spacing: 0px;
+          text-align: center;
+          background: rgba(33, 85, 108, 1);
+        ">Learn More</a>
+      </div>
+    </div>
+
+
+    <div class="bg-white sm:rounded-lg  shadow-lg m-4" style="width: 380px;">
+      <%= image_tag 'portfolio/kitchen3.jpg', alt: 'livingroom', class: 'w-full object-cover', style: 'height: 202px;' %>
+      <div class="p-4">
+        <p class="text-center" style="
+        font-family: Manrope;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0px;
+          text-align: left;
+        ">Bedroom myth </p>
+        <h3 class="text-xl font-bold">By Design Pro</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur. Enim eu sed mauris scelerisque volutpat
+          molestie. Vestibulum blandit a amet risus..</p>
+        <a href="#" class="mt-4 inline-block px-4 py-2" style="font-family: Manrope;
+          font-size: 14px;
+          font-weight: 400;
+          color: white;
+          line-height: 19px;
+          letter-spacing: 0px;
+          text-align: center;
+          background: rgba(33, 85, 108, 1);
+        ">Learn More</a>
+      </div>
+    </div>
+
+    <div class="bg-white sm:rounded-lg  shadow-lg m-4" style="width: 380px;">
+      <%= image_tag 'portfolio/dining4.jpg', alt: 'livingroom', class: 'w-full object-cover', style: 'height: 202px;' %>
+      <div class="p-4">
+        <p class="text-center" style="
+        font-family: Manrope;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 25px;
+          letter-spacing: 0px;
+          text-align: left;
+        ">Space Utilization and Interior Designing</p>
+        <h3 class="text-xl font-bold">By Design Pro</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur. Enim eu sed mauris scelerisque volutpat
+          molestie. Vestibulum blandit a amet risus..</p>
+        <a href="#" class="mt-4 inline-block px-4 py-2" style="font-family: Manrope;
+          font-size: 14px;
+          font-weight: 400;
+          color: white;
+          line-height: 19px;
+          letter-spacing: 0px;
+          text-align: center;
+          background: rgba(33, 85, 108, 1);
+        ">Learn More</a>
+      </div>
+    </div>
+  </div>
 </div>

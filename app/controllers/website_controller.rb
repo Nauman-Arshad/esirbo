@@ -12,4 +12,6 @@ class WebsiteController < ApplicationController
   def about; end
 
   def blog; end
+
+  def pricing; end
 end
