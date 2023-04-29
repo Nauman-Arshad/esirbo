@@ -1,5 +1,41 @@
-<div class="flex justify-center items-center h-screen">
-  <h1 class="text-4xl font-bold text-center text-gray-800">
-    Portfolio Page website!
-  </h1>
+
+
+<div class="relative h-screen" style="height: 400px;">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url(<%= asset_path 'portfolio/portfolio.jpg' %>)">
+    <div class="absolute inset-0 flex items-center justify-center">
+      <button class="text-white px-6 py-3" style="border: 2px solid white">Our Portfolio</button>
+    </div>
+  </div>
 </div>
+  <!-----------------------------------------------------------Kitchen Design----------------------------------------------------------------->
+  <%= render partial: 'shared/slider', locals: { id: 'kitchen-slider', title: 'Kitchen Designs', images: [
+    { src: 'portfolio/kitchen1', alt: 'kitchen' },
+    { src: 'portfolio/kitchen2', alt: 'kitchen' },
+    { src: 'portfolio/kitchen3', alt: 'kitchen' },
+    { src: 'portfolio/kitchen4', alt: 'kitchen' }
+  ] } %>
+
+  <!---------------------------------------------------------------------------Dining Space Design-------------------------------------------------------------------->
+  <%= render partial: 'shared/slider', locals: { id: 'dining-slider', title: 'Dining Space Designs', images: [
+    { src: 'portfolio/dining1', alt: 'dining' },
+    { src: 'portfolio/dining2', alt: 'dining' },
+    { src: 'portfolio/dining3', alt: 'dining' },
+    { src: 'portfolio/dining4', alt: 'dining' }
+  ] } %>
+
+
+<!---------------------------------------------------------------------------Bedroom Design-------------------------------------------------------------------->
+<%= render partial: 'shared/slider', locals: { id: 'bedroom-slider', title: 'Bed Room Designs', images: [
+  { src: 'portfolio/bedroom1', alt: 'Bathroom' },
+  { src: 'portfolio/bedroom2', alt: 'Bathroom' },
+  { src: 'portfolio/bedroom3', alt: 'Bathroom' },
+  { src: 'portfolio/bedroom4', alt: 'Bathroom' }
+] } %>
+
+<!---------------------------------------------------------------------------bath Design-------------------------------------------------------------------->
+<%= render partial: 'shared/slider', locals: { id: 'bath-slider', title: 'Bathroom Designs', images: [
+  { src: 'portfolio/bath1', alt: 'Bathroom' },
+  { src: 'portfolio/bath2', alt: 'Bathroom' },
+  { src: 'portfolio/bath3', alt: 'Bathroom' },
+  { src: 'portfolio/bath4', alt: 'Bathroom' }
+] } %>

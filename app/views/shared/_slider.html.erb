@@ -1,0 +1,70 @@
+<style>
+    .section {
+        margin-inline: auto;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .container {
+        max-width: 75rem;
+        height: auto;
+        margin-inline: auto;
+        padding-inline: 1.25rem;
+    }
+</style>
+
+<div class="slider__column splide" id="<%= id %>">
+  <section class="section slider__section">
+    <div class="container slider__wrapper">
+      <div class="slider__header">
+        <h1 style="font-family: Agency FB;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 43px;
+          padding-bottom: 10px;
+          letter-spacing: 0px;">
+          <%= title %>
+        </h1>
+        <div class="splide__pagination"></div>
+      </div>
+      <div class="splide__track">
+        <ul class="splide__list" style="height: 600px">
+          <% images.each do |image| %>
+            <li class="splide__slide">
+              <%= image_tag image[:src], alt: image[:alt], class: 'h-full w-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none' %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const splide = new Splide("#<%= id %>", {
+            start: 1,
+            perPage: 1.5,
+            perMove: 1,
+            gap: 20,
+            type: "loop",
+            drag: "free",
+            snap: false,
+            interval: 3000,
+            arrows: true,
+            pagination: true,
+            rewind: true,
+            rewindByDrag: true,
+            lazyLoad: true,
+
+            breakpoints: {
+                768: {
+                    perPage: 1,
+                    snap: true
+                }
+            }
+        });
+
+        splide.mount();
+    });
+</script>
