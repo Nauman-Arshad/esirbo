@@ -17,6 +17,10 @@ Rails.application.routes.draw do
     get :blog
     get :pricing
   end
-  get 'client_dashboard', to: 'client#dashboard'
+
+  namespace :client do
+    get 'overview', to: 'client#overview'
+    get 'help', to: 'client#help'
+  end
   get 'professional_dashboard', to: 'professional#dashboard'
 end

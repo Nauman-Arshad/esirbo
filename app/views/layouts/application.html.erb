@@ -17,7 +17,12 @@
   <body>
   <% if controller_name == 'website' %>
     <%= render 'shared/header' %>
+  <% elsif current_user&.user_role.role== "client" %>
+    <%= render 'shared/client_nav' %>
+  <% elsif current_user&.user_role.role== "professional" %>
+    <%= render 'shared/professional_nav' %>
   <% end %>
+
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
   <% end %>

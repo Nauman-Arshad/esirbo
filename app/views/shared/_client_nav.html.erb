@@ -10,7 +10,6 @@
         <span class="profession">Client</span>
       </div>
     </div>
-
     <i class='bx bx-chevron-right toggle'></i>
   </header>
 
@@ -18,10 +17,10 @@
     <div class="menu">
       <ul class="menu-links">
         <li class="nav-link">
-          <a href="#">
+          <%=link_to client_overview_path, class: 'a' do  %>
             <i class='bx bx-home-alt icon'></i>
             <span class="text nav-text">Overview</span>
-          </a>
+          <%end %>
         </li>
 
         <li class="nav-link">
@@ -46,17 +45,17 @@
         </li>
 
         <li class="nav-link">
-          <a href="#">
+          <%= link_to edit_user_registration_path, class: 'a' do %>
             <i class='bx bx-cog icon'></i>
             <span class="text nav-text">Settings</span>
-          </a>
+          <% end %>
         </li>
 
         <li class="nav-link">
-          <a href="#">
+          <%=link_to client_help_path, class: 'a' do  %>
             <i class='bx bx-help-circle icon'></i>
             <span class="text nav-text">Help</span>
-          </a>
+          <%end %>
         </li>
 
       </ul>
@@ -87,7 +86,7 @@
 
         --body-color: #E4E9F7;
         --sidebar-color: #FFF;
-        --primary-color: #1707c4;
+        --primary-color: #21556C;
         --primary-color-light: #F6F5FF;
         --toggle-color: #DDD;
         --text-color: #383838;

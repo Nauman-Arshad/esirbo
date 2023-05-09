@@ -7,7 +7,7 @@
       <div class="flex items-center lg:order-2">
         <% if current_user %>
           <% if current_user&.user_role&.role == "client" %>
-            <%= link_to client_dashboard_path do %>
+            <%= link_to client_overview_path do %>
               <img src="https://picsum.photos/30/30?random=1" alt="Profile"class='rounded-full'>
               <%#= image_tag current_user.avatar.variant(resize_to_limit: [25, 25]), class: "rounded-full" %>
             <% end %>

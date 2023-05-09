@@ -1,10 +1,11 @@
 # frozen_string_literal: true
-
-class ClientController < ApplicationController
+class Client::ClientController < ApplicationController
   before_action :check_client_role
 
-  def dashboard
-    @user = current_user
+  def overview
+  end
+
+  def help
   end
 
   private
