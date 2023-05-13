@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
-class ProfessionalController < ApplicationController
+class Professional::ProfessionalController < ApplicationController
   before_action :check_user_role
 
-  def dashboard
-    @user = current_user
+  def overview
+  end
+
+  def help
   end
 
   private

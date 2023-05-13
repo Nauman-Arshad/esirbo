@@ -1,4 +1,4 @@
-<nav class="sidebar close">
+<nav class="sidebar close shadow-lg">
   <header>
     <div class="image-text">
                 <span class="image">
@@ -46,17 +46,17 @@
         </li>
 
         <li class="nav-link">
-          <a href="#">
+          <%= link_to edit_user_registration_path, class: 'a' do %>
             <i class='bx bx-cog icon'></i>
             <span class="text nav-text">Settings</span>
-          </a>
+          <% end %>
         </li>
 
         <li class="nav-link">
-          <a href="#">
+          <%=link_to professional_help_path, class: 'a' do  %>
             <i class='bx bx-help-circle icon'></i>
             <span class="text nav-text">Help</span>
-          </a>
+          <%end %>
         </li>
 
       </ul>
@@ -98,7 +98,6 @@
 
     body{
         min-height: 100vh;
-        background-color: var(--body-color);
         transition: var(--tran-05);
     }
 
@@ -107,14 +106,6 @@
         color: #fff;
     }
 
-    body.dark{
-        --body-color: #18191a;
-        --sidebar-color: #242526;
-        --primary-color: #3a3b3c;
-        --primary-color-light: #3a3b3c;
-        --toggle-color: #fff;
-        --text-color: #ccc;
-    }
 
     /* ===== Sidebar ===== */
     .sidebar{

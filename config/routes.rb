@@ -22,5 +22,8 @@ Rails.application.routes.draw do
     get 'overview', to: 'client#overview'
     get 'help', to: 'client#help'
   end
-  get 'professional_dashboard', to: 'professional#dashboard'
+  namespace :professional do
+    get 'overview', to: 'professional#overview'
+    get 'help', to: 'professional#help'
+  end
 end

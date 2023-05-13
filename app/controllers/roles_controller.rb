@@ -19,10 +19,10 @@ class RolesController < ApplicationController
 
     if @user.user_role.role == 'client'
       flash[:notice] = 'Welcome to the platform! Your client account has been created successfully.'
-      redirect_to client_dashboard_path
+      redirect_to client_overview_path
     elsif @user.user_role.role == 'professional'
       flash[:notice] = 'Welcome to the platform! Your professional account has been created successfully.'
-      redirect_to professional_dashboard_path
+      redirect_to professional_overview_path
     end
   end
 end

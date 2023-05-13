@@ -17,9 +17,9 @@
   <body>
   <% if controller_name == 'website' %>
     <%= render 'shared/header' %>
-  <% elsif current_user&.user_role.role== "client" %>
+  <% elsif current_user&.user_role&.role== "client" %>
     <%= render 'shared/client_nav' %>
-  <% elsif current_user&.user_role.role== "professional" %>
+  <% elsif current_user&.user_role&.role== "professional" %>
     <%= render 'shared/professional_nav' %>
   <% end %>
 
